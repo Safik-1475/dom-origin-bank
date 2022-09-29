@@ -4,34 +4,26 @@ const depositButton = document.querySelector('#submitDepositBalance');
 depositButton.addEventListener('click', function (event) {
     event.preventDefault();
     const depositBalance = document.getElementById('depositBalance');
-    const depositInputValue = depositBalance.value;
-    const floatDepositValue = parseFloat(depositInputValue);
-    // console.log(typeof floatDepositValue);
+    const depositInputValue = parseFloat(depositBalance.value);
 
     // select current deposit balance
     const currentDeposit = document.querySelector('#deposit');
     // console.log(currentDeposit);
-    const currentDepositInnerText = currentDeposit.innerText;
-    // console.log(typeof currentDepositInnerText);
-    const floatCurrentDepositInnerText = parseFloat(currentDepositInnerText);
-    // console.log(floatCurrentDepositInnerText);
-    const additionFloatValueFloatDepositInnerText = floatCurrentDepositInnerText + floatDepositValue;
-    // add inner text current deposit
-    currentDeposit.innerText = additionFloatValueFloatDepositInnerText;
+    const currentDepositInnerText = parseFloat(currentDeposit.innerText);
+
+    const newDepositBalance = currentDepositInnerText + depositInputValue;
+    currentDeposit.innerText = newDepositBalance;
 
     // Selected account balance
     const currentBalance = document.querySelector('#balance');
-    // console.log(currentBalance);
-    const currentBalanceInnerText = parseFloat(currentBalance.innerText);
-    const totalBalance = additionFloatValueFloatDepositInnerText + currentBalanceInnerText;
-    // console.log(typeof totalBalance);
-
-    // add inner text current balance
+    const prevBalance = parseFloat(currentBalance.innerText);
+    const totalBalance = prevBalance + depositInputValue;
     currentBalance.innerText = totalBalance;
-
 
     depositBalance.value = '';
 });
+
+
 
 // Select Withdraw button
 const withdrawButton = document.getElementById('submitWithdrawBalance');
