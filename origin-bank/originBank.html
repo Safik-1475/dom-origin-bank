@@ -27,10 +27,10 @@
             <div
                 class="shadow-lg rounded-lg p-4 text-center bg-slate-50 border-2 border-l-green-500 border-r-green-500 ">
                 <h3 class="text-2xl font-semibold uppercase text-green-600">withdraw</h3>
-                <h2 class="text-3xl font-bold py-4 ">$<span id="withdraw"> 00</span></h2>
+                <h2 class="text-3xl font-bold py-4 ">$<span id="withdrawn"> 00</span></h2>
             </div>
             <div class="shadow-lg rounded-lg p-4 text-center bg-slate-50 border-2 border-r-green-600">
-                <h3 class="text-2xl font-semibold uppercase text-green-700">balance</h3>
+                <h3 class="text-2xl font-semibold uppercase text-green-700">account balance</h3>
                 <h2 class="text-3xl font-bold py-4">$<span id="balance"> 00</span></h2>
             </div>
         </section>
@@ -50,14 +50,16 @@
                 <h3 class="text-2xl font-semibold uppercase text-red-600">withdraw balance</h3>
                 <form action="#" class="my-3">
                     <input class="w-3/5 py-2 px-2 rounded-lg bg-green-100 border-state-200 border-2 mr-2" type="text"
-                        name="balance number" id="depositBalance">
+                        name="balance number" id="withdrawBalance">
                     <input
                         class=" py-2 px-2 border-state-200 border-2 cursor-pointer rounded-lg font-semibold uppercase text-sm bg-green-100"
-                        type="submit" id="submitDepositBalance" value="withdraw">
+                        type="submit" id="submitWithdrawBalance" value="withdraw">
                 </form>
             </div>
         </section>
     </main>
+    <!-- origin bank js -->
+    <script src="./js/originBank.js"></script>
 </body>
 
 </html>
